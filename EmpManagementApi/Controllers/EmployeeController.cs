@@ -16,10 +16,15 @@ namespace EmpManagementApi.Controllers
         private readonly IErrorLog _errorLog;
          
 
-        public EmployeeController(IEmployee employee, IErrorLog errorLog)
+        public EmployeeController(IEmployee employee)
         {
             _employee = employee;
-            _errorLog = errorLog;
+          
+        }
+        public EmployeeController(IErrorLog errorlog)
+        {
+            _errorLog = errorlog;
+
         }
 
 
